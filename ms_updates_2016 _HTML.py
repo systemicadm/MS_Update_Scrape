@@ -1,20 +1,6 @@
-import feedparser
-from pandas.io.json import json_normalize
-import pandas as pd
+
 import requests
 from bs4 import BeautifulSoup
-
-rss_url='https://support.microsoft.com/app/content/api/content/feeds/sap/en-us/c3a1be8a-50db-47b7-d5eb-259debc3abcc/rss'
-#Read feed xml data
-news_feed = feedparser.parse(rss_url) 
-
-#Flatten data
-df_news_feed=json_normalize(news_feed.entries)
-
-#Read articles links
-df_news_feed.link.head()
-
-----------------------
 
 URL = "https://support.microsoft.com/app/content/api/content/feeds/sap/en-us/c3a1be8a-50db-47b7-d5eb-259debc3abcc/rss"
 page = requests.get(URL)
