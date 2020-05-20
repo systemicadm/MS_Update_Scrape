@@ -1,4 +1,10 @@
 {
     "python.pythonPath": ".venv\\Scripts\\python.exe",
-    "python.pipenvPath": ".venv\\Scripts\\pip3.exe"
+    "python.pipenvPath": ".venv\\Scripts\\pip3.exe",
+    "python.testing.pytestArgs": [
+        "."
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true
 }
